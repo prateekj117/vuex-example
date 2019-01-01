@@ -4,16 +4,17 @@
     <ul>
       <li v-for="product in products">
         <span class="name">{{ product.name }}</span>
-        <span class="price">£{{ product.price }}</span></li>
+        <span class="price">£{{ product.price }}</span>
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
   export default {
-    props: ['products'],
-    data () {
-      return {
+    computed: {
+      products(){
+        return this.$store.state.products;
       }
     }
   }
