@@ -19,6 +19,11 @@
       saleProducts(){
         return this.$store.getters.saleProducts;
       }
+    },
+    methods: {
+      reducePrice() {
+        this.$store.commit("reducePrice");
+      }
     }
   }
 </script>
